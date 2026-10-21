@@ -1,0 +1,969 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #173b7a;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* MENU SUPERIOR */
+.inicio {
+    background-color: #1b438f;
+    min-height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 5px 3%;
+}
+
+.inicio a {
+    color: white;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.inicio a:hover {
+    color: #8bd5ff;
+}
+
+/* SEGUNDO MENU */
+.inicio2 {
+    background-color: white;
+    min-height: 48px;
+    display: flex;
+    align-items: center
+    justify-content: center;
+    gap: 15px;
+    padding: 8px 5%;
+    border-bottom: 1px solid #ddd;
+}
+
+.inicio2 img {
+    width: 85px;
+    height: auto;
+    object-fit: contain;
+    margin-right: auto;
+}
+
+.inicio2 a {
+    position: relative;
+    color: #173b7a;
+    text-decoration: none;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.inicio2 a:hover {
+    color: #0875bd;
+}
+
+/* BUSCA E BANNER */
+.busca {
+    position: relative;
+    background-color: white;
+    padding-top: 28px;
+}
+
+.busca form {
+    position: absolute;
+    top: 4px;
+    left: 27%;
+    width: 47%;
+    height: 24px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.busca input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 5px 12px;
+    font-size: 10px;
+}
+
+.busca button {
+    background-color: #07549e;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.busca button:hover {
+    background-color: #123b7c;
+}
+
+/* IMAGEM PRINCIPAL */
+.busca > img {
+    display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* TEXTO ABAIXO DO BANNER */
+.frase {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 45px 15px 35px;
+    background-color: white;
+}
+
+.frase h2 {
+    color: #07549e;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.frase p {
+    color: #33445e;
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+/* ÁREA DE ATUAÇÃO */
+.atuacoes {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 0 16px;
+    background: linear-gradient(
+        to bottom,
+        white 0,
+        white 146px,
+        #07549e 146px,
+        #07549e 100%
+    );
+}
+
+/* TÍTULO DA ÁREA */
+.atuacoes > h2 {
+    grid-column: 1 / -1;
+    color: #07549e;
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 0;
+}
+
+/* CARTÕES */
+.educacao,
+.Desenvolvimento,
+.tecnologia {
+    min-width: 0;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px 12px 20px;
+    background-color: #50afd2;
+    border-radius: 11px;
+    color: #073f7d;
+    transition: transform 0.3s;
+}
+
+.educacao:hover,
+.Desenvolvimento:hover,
+.tecnologia:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGENS DOS CARTÕES */
+.educacao img,
+.Desenvolvimento img,
+.tecnologia img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+/* TÍTULOS DOS CARTÕES */
+.educacao h3,
+.Desenvolvimento h3,
+.tecnologia h3 {
+    color: #064785;
+    font-size: 14px;
+    line-height: 1.2;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* TEXTOS DOS CARTÕES */
+.educacao p,
+.Desenvolvimento p,
+.tecnologia p {
+    color: white;
+    font-size: 8px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* BOTÕES DOS CARTÕES */
+.educacao button,
+.Desenvolvimento button,
+.tecnologia button {
+    width: 95px;
+    margin-top: auto;
+    padding: 6px 10px;
+    background-color: #07549e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.educacao button:hover,
+.Desenvolvimento button:hover,
+.tecnologia button:hover {
+    background-color: #173b7a;
+}
+
+/* FAIXA INFERIOR */
+.final {
+    grid-column: 1 / -1;
+    background-color: #07549e;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.final h2 {
+    font-size: 25px;
+}
+
+/* TABLETS */
+@media (max-width: 760px) {
+    .inicio {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .inicio2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio2 img {
+        width: 90px;
+        margin: 0 auto 8px;
+    }
+
+    .inicio2 a {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .busca > img {
+        height: 180px;
+    }
+
+    .frase {
+        padding: 30px 6%;
+    }
+
+    .atuacoes {
+        max-width: 90%;
+        gap: 15px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 520px) {
+    .atuacoes {
+        grid-template-columns: 1fr;
+        max-width: 85%;
+        gap: 18px;
+        background: linear-gradient(
+            to bottom,
+            white 0,
+            white 70px,
+            #07549e 70px,
+            #07549e 100%
+        );
+    }
+
+    .atuacoes > h2 {
+        margin-bottom: 5px;
+    }
+
+    .educacao,
+    .Desenvolvimento,
+    .tecnologia {
+        min-height: 220px;
+    }
+
+    .busca form {
+        left: 5%;
+        width: 90%;
+    }
+
+    .busca > img {
+        height: 150px;
+    }
+
+    .frase h2 {
+        font-size: 18px;
+    }
+};
+
+/* SEÇÃO SOLUÇÕES */
+.final {
+    background-color: #07549e;
+    color: white;
+    min-height: 96px;
+    padding: 10px 8%;
+    text-align: left;
+}
+
+.final h2 {
+    font-size: 21px;
+    line-height: 1.2;
+    max-width: 300px;
+    margin-left: 7%;
+}
+
+/* SEÇÃO INOVAÇÃO E TECNOLOGIA */
+.inovacao-tecnologia {
+    position: relative;
+    min-height: 155px;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    background: #60b9bb;
+    overflow: hidden;
+}
+
+.inovacao-tecnologia h2 {
+    position: relative;
+    z-index: 2;
+    width: 55%;
+    max-width: 500px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.inovacao-tecnologia button {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    color: #07549e;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.inovacao-tecnologia button:hover {
+    background-color: #07549e;
+    color: white;
+}
+
+/* IMAGEM À DIREITA */
+.inovacao-tecnologia img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center top;
+    transform: none;
+}
+
+/* DESTAQUES */
+.destaque {
+    background-color: white;
+    padding: 30px 4% 25px;
+}
+
+.destaque h1 {
+    color: #07549e;
+    font-size: 16px;
+    margin: 0 0 30px;
+    padding: 0;
+    border: none;
+}
+
+/* BANNERS LADO A LADO */
+.pedreiro,
+.una {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 40px);
+    margin: 0 35px 0 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.una {
+    margin-right: 0;
+}
+
+.pedreiro img,
+.una img {
+    display: block;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.pedreiro img:hover,
+.una img:hover {
+    transform: scale(1.03);
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .final {
+        padding: 20px;
+    }
+
+    .final h2 {
+        margin-left: 0;
+        font-size: 20px;
+    }
+
+    .inovacao-tecnologia {
+        min-height: 280px;
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .inovacao-tecnologia h2 {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .inovacao-tecnologia img {
+        width: 35%;
+    }
+
+    .destaque {
+        padding: 25px 15px;
+    }
+
+    .pedreiro,
+    .una {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .pedreiro img,
+    .una img {
+        height: auto;
+        min-height: 100px;
+    }
+}
+
+
+/* SEÇÃO NOTÍCIAS */
+.noticias {
+    background: linear-gradient(
+        to bottom,
+        #50afd2 0,
+        #50afd2 110px,
+        #ffffff 110px,
+        #ffffff 100%
+    );
+    padding: 10px 4% 35px;
+    overflow: hidden;
+}
+
+.noticias h2 {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 0 35px;
+}
+
+/* IMAGENS DAS NOTÍCIAS */
+.imagens-prin {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    overflow-x: auto;
+    padding: 0 0 15px;
+}
+
+.imagens-prin img {
+    flex: 0 0 125px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: transform 0.3s;
+}
+
+.imagens-prin img:hover {
+    transform: translateY(-4px);
+}
+
+/* BOTÃO MAIS NOTÍCIAS */
+.button-noticia {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-noticia button {
+    width: 300px;
+    max-width: 100%;
+    padding: 10px 25px;
+    color: #ffffff;
+    background-color: #50afd2;
+    border: none;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button-noticia button:hover {
+    background-color: #07549e;
+}
+
+/* SEÇÃO QUER SABER MAIS */
+.saber-mais {
+    position: relative;
+    min-height: 255px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 40px 7%;
+    background-color: #50afd2;
+    color: #ffffff;
+    overflow: visible;
+}
+
+/* IMAGEM À ESQUERDA */
+.saber-mais > img {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
+    height: 248px;
+    object-fit: cover;
+    object-position: center;
+    justify-self: center;
+}
+
+/* TEXTO À DIREITA */
+.saber-mais h2 {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+.saber-mais p {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 9px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.saber-mais button {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 20px;
+    margin: 0;
+    color: #ffffff;
+    background-color: #07549e;
+    border: none;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.saber-mais button:hover {
+    background-color: #173b7a;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .noticias {
+        padding: 15px 5% 30px;
+    }
+
+    .imagens-prin {
+        gap: 18px;
+    }
+
+    .imagens-prin img {
+        flex-basis: 145px;
+        width: 145px;
+        height: 145px;
+    }
+
+    .saber-mais {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 7%;
+    }
+
+    .saber-mais > img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        max-height: 280px;
+    }
+
+    .saber-mais h2 {
+        font-size: 20px;
+    }
+
+    .saber-mais p {
+        font-size: 12px;
+    }
+}
+
+
+/* NEWSLETTER */
+.newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 80px;
+    padding: 40px 8% 50px;
+    min-height: 200px;
+    background-color: #ffffff;
+}
+
+.newsletter-texto p {
+    max-width: 280px;
+    color: #555555;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 475px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    height: 30px;
+    padding: 7px 13px;
+    border: 1px solid #888888;
+    border-radius: 25px;
+    outline: none;
+    font-size: 12px;
+}
+
+.newsletter-form input:focus {
+    border-color: #1b438f;
+}
+
+.newsletter-form input::placeholder {
+    color: #b5b5b5;
+}
+
+.newsletter-form p {
+    color: #555555;
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 3px;
+}
+
+.newsletter-form p a {
+    color: #0754b5;
+    text-decoration: none;
+}
+
+.newsletter-form p a:hover {
+    text-decoration: underline;
+}
+
+.newsletter-form button {
+    align-self: center;
+    margin-top: 2px;
+    padding: 7px 22px;
+    background-color: white;
+    color: #173b7a;
+    border: 1px solid #173b7a;
+    border-radius: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #173b7a;
+    color: white;
+}
+
+/* RODAPÉ AZUL */
+.rodape {
+    background-color: #1c438f;
+    color: #ffffff;
+    padding: 110px 8% 35px;
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1.2fr 1.1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ATENDIMENTO */
+.atendimento h4 {
+    color: white;
+    font-size: 11px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.atendimento p {
+    color: white;
+    font-size: 10px;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+.atendimento > a {
+    display: block;
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 7px;
+}
+
+.atendimento > a:last-child {
+    font-size: 10px;
+}
+
+.atendimento > a:hover {
+    color: #c5dcff;
+}
+
+/* COLUNAS DE LINKS */
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.rodape-coluna h4 {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+.rodape-coluna a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: color 0.3s;
+}
+
+.rodape-coluna a:hover {
+    color: #c5dcff;
+}
+
+/* PARTE INFERIOR */
+.rodape-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 95px auto 0;
+}
+
+/* LOGO SENAI */
+.logo-rodape h1 {
+    color: white;
+    font-size: 43px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.logo-rodape p {
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* ENDEREÇO */
+.endereco p {
+    color: white;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* REDES SOCIAIS */
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    color: #1c438f;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+    background-color: #c5dcff;
+    transform: translateY(-3px);
+}
+
+/* TABLETS */
+@media (max-width: 850px) {
+    .newsletter {
+        gap: 35px;
+        padding: 40px 5%;
+    }
+
+    .rodape {
+        padding: 65px 5% 30px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .rodape-inferior {
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 550px) {
+    .newsletter {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 35px 6%;
+    }
+
+    .newsletter-texto p {
+        max-width: 100%;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+
+    .newsletter-form button {
+        align-self: flex-start;
+    }
+
+    .rodape {
+        padding: 45px 7% 25px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rodape-inferior {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        margin-top: 45px;
+    }
+
+    .logo-rodape h1 {
+        font-size: 38px;
+    }
+
+    .redes-sociais {
+        flex-wrap: wrap;
+    }
+}
+
+
