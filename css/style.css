@@ -29,57 +29,150 @@ button {
     cursor: pointer;
 }
 
-/* MENU SUPERIOR */
+/* MENU SUPERIOR AZUL */
 .inicio {
+    width: 100%;
+    min-height: 44px;
     background-color: #1b438f;
-    min-height: 23px;
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 5px 3%;
+    justify-content: flex-start;
+
+    padding: 0 2.8%;
+    gap: 0;
+
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
 .inicio a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 9px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: normal;
+
+    padding: 0 12px;
+    line-height: 18px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    transition: color 0.3s;
 }
 
 .inicio a:hover {
     color: #8bd5ff;
 }
 
-/* SEGUNDO MENU */
-.inicio2 {
-    background-color: white;
-    min-height: 48px;
-    display: flex;
-    align-items: center
-    justify-content: center;
-    gap: 15px;
-    padding: 8px 5%;
-    border-bottom: 1px solid #ddd;
+/* SEPARA OS LINKS DA ESQUERDA E DA DIREITA */
+.inicio a:nth-child(8) {
+    margin-left: auto;
 }
 
+.inicio a:last-child {
+    border-right: none;
+}
+
+/* SEGUNDO MENU BRANCO */
+.inicio2 {
+    width: 100%;
+    min-height: 94px;
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 10px 2.8%;
+    gap: 0;
+
+    border-bottom: 1px solid #eeeeee;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+/* LOGO SENAI */
 .inicio2 img {
-    width: 85px;
+    width: 160px;
     height: auto;
     object-fit: contain;
+
+    flex-shrink: 0;
     margin-right: auto;
 }
 
+/* LINKS DO SEGUNDO MENU */
 .inicio2 a {
-    position: relative;
+    display: flex;
+    align-items: center;
+
     color: #173b7a;
     text-decoration: none;
-    font-size: 9px;
+    font-size: 13px;
+    font-weight: normal;
+
+    padding: 10px 10px;
     white-space: nowrap;
+
+    transition: color 0.3s;
 }
 
 .inicio2 a:hover {
     color: #0875bd;
+}
+
+/* AJUSTES PARA TELAS MENORES */
+@media (max-width: 900px) {
+    .inicio {
+        min-height: 38px;
+        padding: 0 10px;
+    }
+
+    .inicio a {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+
+    .inicio2 {
+        min-height: 80px;
+        padding: 10px 15px;
+    }
+
+    .inicio2 img {
+        width: 120px;
+    }
+
+    .inicio2 a {
+        font-size: 10px;
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .inicio {
+        justify-content: flex-start;
+    }
+
+    .inicio a {
+        font-size: 10px;
+        padding: 0 7px;
+    }
+
+    .inicio2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .inicio2 img {
+        width: 120px;
+        margin: 0 auto 10px;
+    }
+
+    .inicio2 a {
+        white-space: normal;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 /* BUSCA E BANNER */
